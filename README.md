@@ -1,2 +1,2 @@
 # etch-a-sketch
-etch a sketch game for odun project curriculam
+etch a sketch game for odin project curriculam
