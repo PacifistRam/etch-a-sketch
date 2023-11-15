@@ -3,26 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <title>etch a sketch</title>
 </head>
 <body>
-    <h1>Etch a sketch game</h1>
-    <input type="range" min="4" max="100" value="16">
-    <span></span>
-    <div>
-
-       <button class="grid-lines">Grid</button>
-       <button class="black-button">black</button>
-       <button class="random-button">Random Color</button>
-       <button class="eraser">Eraser</button>
-       <button class="clear">Reset</button>
-    </div>
-    <div class="main-container">
-      
-       
-    </div>
+    <h1 class="title">Etch a sketch game</h1>
+   
+    
+    
+        <div class="wrapper">
+            <div class = "button-container">
+               <button class="grid-lines">Grid</button>
+               <button class="black-button">black</button>
+               <button class="random-button">Random</button>
+               <button class="eraser">Eraser</button>
+               <button class="clear">Reset</button>
+            </div>
+            
+            <div class="main-container">
+            
+            
+            </div>
+            <div class="pixel-range">
+                <h3>Change the size of pixels </h3>
+                <input type="range" min="4" max="100" value="16">
+                <span></span>
+            </div>
+        </div>
+  
 
 
 

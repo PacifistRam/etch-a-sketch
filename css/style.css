@@ -13,6 +13,7 @@ html {
     margin: 0;
     padding: 0;
     font-weight: normal;
+    font-family: 'Merriweather', serif;
   }
   
   ol, ul {
@@ -24,25 +25,98 @@ html {
     height: auto;
   }
 /* ////////////////////////////////////////////////////////////////   */
+.title {
+  text-align: center;
+  font-family: 'merriweather',serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 4rem;
+  color: rgb(94, 180, 238);
+  margin-top: 20px;
+
+
+}
+
+
+button {
+  width: 70px;
+  height: 40px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-style: italic;
+  cursor: pointer;
+  box-shadow: 0 0 2px 2px black;
+}
+button:hover {
+  border: 1px solid red;
+  border-radius: 20px;
+  transition: 1sec ease-in;
+  color: white;
+  background-color: rgb(171, 171, 245);
+  
+ 
+
+}
+
+.wrapper {
+  border: 1px solid black;
+  background-color: #c19a6b;
+  max-width: 60%;
+  margin: auto;
+  margin-top: 10px ;
+}
+
+
+
+.button-container {
+  margin: 20px auto;
+  display: flex;
+  height:50px;
+  width:600px;
+  gap: 1em;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
 .main-container
 {
-    margin: 200px;
+   
+    margin: 20px auto;
     display: grid;
-    /* grid-template-columns: repeat(16,1fr); */
-    /* grid-template-rows:repeat(16,1fr); */
-    width: 500px;
-    height: 500px;
-    border:solid 1px black;
+    width: 600px;
+    height: 600px;
+    border:solid 4px rgb(150, 147, 147);
+    box-shadow: 0 0 5px 5px black;
+    cursor: crosshair;
   ;
     
-    /* background-color: aqua; */
+   
    
 }
+
+.pixel-range { 
+ display: flex;
+ width: 600px;
+ margin:10px auto;
+ justify-content: center;
+ align-items: center;
+ gap:2rem;
+ height: 40px;
+ font-size: 1.2rem;
+ font-weight: 300;
+ font-style: italic;
+}
+
 
 .pixel-container {
    
     background-color: white;
-    /* border: solid 1px black; */
+    
    
 }
 
@@ -51,7 +125,7 @@ html {
 }
 
 .grid-lines-visible  {
-    border: solid 1px black;
+    border: solid 1px rgb(150, 147, 147);
 }
 
 
