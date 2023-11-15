@@ -5,6 +5,7 @@ const gridLines = document.querySelector('.grid-lines');
 const clearButton = document.querySelector('.clear');
 const eraseButton = document.querySelector('.eraser')
 const blackButton = document.querySelector('.black-button')
+const randomButton = document.querySelector('.random-button')
 const defaultPixelSize = 16;
 let color = 'black';
 let painting = false;
@@ -34,10 +35,14 @@ eraseButton.addEventListener('click', () => {
 blackButton.addEventListener('click', () => {
     setColor('black');
 });
+randomButton.addEventListener('click', () => {
+   color = 'randomColor';
+    
+});
 // Event listener for resetting sketch area
 clearButton.addEventListener('click', () => {
     clearSketch();
-    color = 'black';
+    
 });
 
 //event listeners for drag and paint
@@ -60,7 +65,14 @@ function setupGrid(pixelSize) {
         mainContainer.appendChild(pixel);
         pixel.addEventListener('mouseover', () => {
             if (painting) {
-            pixel.style.backgroundColor = `${color}`;
+                if (color === 'randomColor')
+                {
+                    pixel.style.backgroundColor = getRandomColor();
+                }
+                else
+                {
+                    pixel.style.backgroundColor = color;
+                }      
             }
         });
     }
@@ -96,14 +108,23 @@ function setColor(col)
         case 'black':
          color = 'black';
          break;
-        
-        // case caseExpressionN:
-        //   statements
+       
+          
         default:
           color = 'black';
           break;
       }
       
+}
+
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    console.log(color);
+    return color;
 }
 
 
