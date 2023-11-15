@@ -26,6 +26,7 @@ input.addEventListener("input", (event) => {
 // Event listener for removing grid lines
 gridLines.addEventListener('click', () => {
     toggleGridLines();
+   
 });
 // Event listener for erasing a pixel
 eraseButton.addEventListener('click', () => {
@@ -75,6 +76,13 @@ function setupGrid(pixelSize) {
                 }      
             }
         });
+        //code to prevent issues arise because of div's being dragged
+        pixel.addEventListener('dragstart', (e) => {
+            e.preventDefault();
+        } );
+        pixel.addEventListener('drop', (e) => {
+            e.preventDefault();
+        } );
     }
 }
 
